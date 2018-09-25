@@ -130,6 +130,7 @@
                             <a href="javascript:void(0)" class="btn-edit">编辑</a>
                             <a href="javascript:void(0)" class="btn-del">删除</a>
                         </td>
+                        <td class="id2" style="display: none">{{ $stockTransfer['id'] }}</td>
                     </tr>
                 @endforeach
             @endif
@@ -198,6 +199,7 @@
         });
         $('.btn-edit').unbind('click').click(function () {
             let id = $(this).parents('tr').find('.id').text();
+            let id2 = $(this).parents('tr').find('.id2').text();
             let data = {
                 stock_transfer_id: $(this).parents('tr').find('.id').text()
             };
@@ -207,7 +209,7 @@
                 data: data,
                 dataType: 'JSON',
                 success: function (response, status, xhr) {
-                    showDetail(response, id);
+                    showDetail(response, id, id2);
                 },
                 error: function (xhr, errorText, errorType) {
                     ajaxError(errorType);
@@ -216,7 +218,7 @@
             })
         });
 
-        function showDetail(res, id) {
+        function showDetail(res, id, id2) {
             if (res.retcode == 1) {
                 $('#stockroomOut').val(res.data['out_stockroom_id']);
                 $('#stockroomIn').val(res.data['in_stockroom_id']);
@@ -227,6 +229,7 @@
             showModal('#modifyStockTransfer', '编辑');
             $('.modify-stock-transfer').unbind('click').click(function () {
                 let details = [{
+                    id: id2,
                     product: $('#product').val(),
                     amount: $('#amount').val()
                 }];
