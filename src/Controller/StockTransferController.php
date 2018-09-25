@@ -10,7 +10,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Log;
 use StructuredResponse\StructuredResponse;
 
-class InventoryController extends Controller
+class StockTransferController extends Controller
 {
     use StructuredResponse, ApiValidator;
 
