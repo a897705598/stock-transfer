@@ -137,9 +137,9 @@
         </table>
     </div>
 </div>
-@include('stock.addStockTransfer')
-@include('stock.confirm')
-@include('stock.modifyStockTransfer')
+@include('ares.stock.addStockTransfer')
+@include('ares.stock.confirm')
+@include('ares.stock.modifyStockTransfer')
 <script>
     $(function () {
         $('.btn-add').unbind('click').click(function () {
