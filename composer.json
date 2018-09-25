@@ -1,0 +1,52 @@
+{
+    "name": "ares/stock-transfer",
+    "description": "ares stock transfer module",
+    "type": "library",
+    "authors": [
+        {
+            "name": "MrGuin",
+            "email": "mrguin33@qq.com"
+        }
+    ],
+    "require": {
+        "php-packages/structured-response": "^0.0.2",
+        "jxc/supplier-product": "^0.0.3",
+        "jxc/dept-stockroom": "^0.0.2",
+        "jxc/employee": "^0.0.2",
+    },
+    "autoload": {
+        "psr-4": {
+            "Ares\\": "src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Ares\\Provider\\AresStockTransferProvider"
+            ]
+        }
+    },
+    "repositories": [
+        {
+            "type": "git",
+            "url": "https://github.com/3930615/php-packages-structured-response.git"
+        },
+        {
+            "type": "git",
+            "url": "https://github.com/a897705598/supplier-product.git"
+        },
+        {
+            "type": "git",
+            "url": "https://github.com/a897705598/dept-stockroom.git"
+        },
+        {
+            "type": "git",
+            "url": "https://github.com/a897705598/employee.git"
+        },
+        {
+            "type": "git",
+            "url": "https://github.com/a897705598/customer.git"
+        }
+    ]
+}
