@@ -17,7 +17,6 @@ class CreateStockTransferTable extends Migration
             $table->increments('stock_transfer_id');
             $table->unsignedInteger('out_stockroom_id');
             $table->unsignedInteger('in_stockroom_id');
-            $table->integer('amount');
             $table->unsignedInteger('manager');
             $table->unsignedInteger('operator');
             $table->timestamps();
