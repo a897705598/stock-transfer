@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Model\Stock;
+namespace App\Model\Ares;
 
 use Illuminate\Database\Eloquent\Model;
 
