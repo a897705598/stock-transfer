@@ -12,7 +12,7 @@
         "php-packages/structured-response": "^0.0.2",
         "jxc/supplier-product": "^0.0.3",
         "jxc/dept-stockroom": "^0.0.2",
-        "jxc/employee": "^0.0.2",
+        "jxc/employee": "^0.0.2"
     },
     "autoload": {
         "psr-4": {
